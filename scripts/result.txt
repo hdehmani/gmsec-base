@@ -1,0 +1,38 @@
+{
+   "schemaVersion": 1,
+   "name": "alpine",
+   "tag": "3.20.3",
+   "architecture": "amd64",
+   "fsLayers": [
+      {
+         "blobSum": "sha256:a3ed95caeb02ffe68cdd9fd84406680ae93d633cb16422d00e8a7c22955b46d4"
+      },
+      {
+         "blobSum": "sha256:43c4264eed91be63b206e17d93e75256a6097070ce643c5e8f0379998b44f170"
+      }
+   ],
+   "history": [
+      {
+         "v1Compatibility": "{\"architecture\":\"amd64\",\"config\":{\"Hostname\":\"\",\"Domainname\":\"\",\"User\":\"\",\"AttachStdin\":false,\"AttachStdout\":false,\"AttachStderr\":false,\"Tty\":false,\"OpenStdin\":false,\"StdinOnce\":false,\"Env\":[\"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"],\"Cmd\":[\"/bin/sh\"],\"Image\":\"sha256:2b00b4bd27e9e55889516b87471798d04fafb613bbbfc4c46589b7ce7f7e75e4\",\"Volumes\":null,\"WorkingDir\":\"\",\"Entrypoint\":null,\"OnBuild\":null,\"Labels\":null},\"container\":\"a9f02e65025ad035b1bbd0ccda6a13d174e4ed21633f2671364c725a56bd7107\",\"container_config\":{\"Hostname\":\"a9f02e65025a\",\"Domainname\":\"\",\"User\":\"\",\"AttachStdin\":false,\"AttachStdout\":false,\"AttachStderr\":false,\"Tty\":false,\"OpenStdin\":false,\"StdinOnce\":false,\"Env\":[\"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"],\"Cmd\":[\"/bin/sh\",\"-c\",\"#(nop) \",\"CMD [\\\"/bin/sh\\\"]\"],\"Image\":\"sha256:2b00b4bd27e9e55889516b87471798d04fafb613bbbfc4c46589b7ce7f7e75e4\",\"Volumes\":null,\"WorkingDir\":\"\",\"Entrypoint\":null,\"OnBuild\":null,\"Labels\":{}},\"created\":\"2024-09-06T22:20:07.972381771Z\",\"docker_version\":\"23.0.11\",\"id\":\"105b714aaae5c6c61e558ae44168a9eef41f2602efd59f6f6045ecfdd7904b86\",\"os\":\"linux\",\"parent\":\"e3a7692be766388a0726b27081365ab952e10a2339da6b9fad3430621ce058c7\",\"throwaway\":true}"
+      },
+      {
+         "v1Compatibility": "{\"id\":\"e3a7692be766388a0726b27081365ab952e10a2339da6b9fad3430621ce058c7\",\"created\":\"2024-09-06T22:20:07.740564901Z\",\"container_config\":{\"Cmd\":[\"/bin/sh -c #(nop) ADD file:5758b97d8301c84a204a6e516241275d785a7cade40b2fb99f01fe122482e283 in / \"]}}"
+      }
+   ],
+   "signatures": [
+      {
+         "header": {
+            "jwk": {
+               "crv": "P-256",
+               "kid": "M7IM:QNNO:PQDK:DTGH:DZF2:3BCB:YF3Y:BNIH:K5JR:A4ZO:OEMS:X235",
+               "kty": "EC",
+               "x": "9rgWP8ss8dl9PAQqLXmavB5HreSYBxNPhFsPdX5OoEk",
+               "y": "n2SjNcC7hfnUuIIZw3ESw2EV_Ty6yufFXZOZ4FytK3k"
+            },
+            "alg": "ES256"
+         },
+         "signature": "53uEpkvRY9O3v2OdcpOH-mfEUelZK3A4ZMd4tKEusnyBChWXDOGW-KCyq6nhKcKJx7DR1HwkGwwsXzmRLZN7bA",
+         "protected": "eyJmb3JtYXRMZW5ndGgiOjIwODgsImZvcm1hdFRhaWwiOiJDbjAiLCJ0aW1lIjoiMjAyNC0wOS0xNlQwMjo1NTozNloifQ"
+      }
+   ]
+}

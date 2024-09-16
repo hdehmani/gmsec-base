@@ -1,0 +1,57 @@
+==================================================================================
+
+# Pull the registry:2.8.3 Docker image from Docker Hub
+
+docker pull registry:2.8.3
+
+# Save the registry in a tar file
+
+docker image save registry:2.8.3 | gzip > registry_2.8.3.tar.gz
+
+# Start the registry in the background
+
+docker run -itd -p 5000:5000 --name dehmani-registry registry:2.8.3
+
+# Stop the registry container
+
+docker container stop dehmani-registry
+
+# Remove the registry container
+
+docker container remove dehmani-registry
+
+# Remove the registry image
+
+docker image remove registry:2.8.3
+
+==================================================================================
+# View the daemon.json file to see if the registry is insecure
+
+more /etc/docker/daemon.json
+
+{
+
+    "insecure-registries":[
+
+        "localhost:5000"
+
+    ]
+
+}
+==================================================================================
+
+docker image inspect ubuntu:20.04
+
+docker image inspect redhat/ubi8:8.10
+
+
+
+docker image tag ubuntu:20.04 hdehmani/ubuntu:20.04
+
+# This will create a tag in  Docker Hub under your namespace = hdehmani
+
+docker image tag redhat/ubi8:8.10 hdehmani/redhat/ubi8:8.10
+
+# This will create a tag that points to your Private registry
+
+docker image tag redhat/ubi8:8.10 localhost:5000/redhat/ubi8:8.10

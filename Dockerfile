@@ -1,0 +1,39 @@
+ARG BASE_REGISTRY=localhost:5000
+ARG IMAGE_NAME=redhat/ubi8
+ARG IMAGE_TAG=8.10-1054
+
+FROM ${BASE_REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}
+
+# Install GMSEC API
+
+WORKDIR /gmsec
+
+ENV GMSEC_HOME=/gmsec/GMSEC_API
+ENV LD_LIBRARY_PATH=${GMSEC_HOME}/bin:${LD_LIBRARY_PATH}
+
+ARG GMSEC_API_FILE=GMSEC_API-5.1-RH8_x86_64.tar.gz
+
+COPY gmsec/${GMSEC_API_FILE} .
+
+RUN tar -xvzf ${GMSEC_API_FILE}
+
+ENV PATH="${GMSEC_HOME}/bin:${PATH}"
+
+# Install JDK
+
+WORKDIR /java
+
+ENV JAVA_HOME=/java/jdk-11.0.24+8
+
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
+
+ARG JDK_FILE=OpenJDK11U-jdk_x64_linux_hotspot_11.0.24_8.tar.gz
+
+COPY java/${JDK_FILE} .
+
+RUN tar -xvzf ${JDK_FILE}
+
+ENV CLASSPATH=$GMSEC_HOME/bin/gmsecapi.jar
+
+CMD ["ls"]
+
